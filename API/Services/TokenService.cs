@@ -1,4 +1,3 @@
-using System;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
@@ -39,24 +38,4 @@ public class TokenService(IConfiguration config): ITokenService
         var token = tokenHandler.CreateToken(tokenDescriptor);
         return tokenHandler.WriteToken(token);
     }
-
-    // public string CreateRefreshToken()
-    // {
-    //     throw new NotImplementedException();
-    // }
-
-    // public bool ValidateRefreshToken(string refreshToken)
-    // {
-    //     throw new NotImplementedException();
-    // }
-
-    // public void RevokeRefreshToken(string refreshToken)
-    // {
-    //     throw new NotImplementedException();
-    // }
-
-    // public Task<AppUser> GetUserFromRefreshTokenAsync(string refreshToken)
-    // {
-    //     throw new NotImplementedException();
-    // }
 }
